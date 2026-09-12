@@ -2954,3 +2954,9 @@ Arbhar 只是用户见过的一个例子；类似导光工程很多。不能停�
 - 已建立 `illustrator/MOMO_R166_REQ146_PANEL.ai`。Illustrator 30.3.0 关闭后回读：71.12 × 128.5 mm、238 paths、22 editable text frames、1 embedded raster、0 placed items。
 - 原 SVG 中隐藏制造辅助组继续仅由权威 SVG 保存；AI 工程面向当前可见面板编辑。官方底部锁定标识按原稿保留为单独嵌入位图层。
 - `tools/audit_current.py` 运行结果 PASS 7/7。当前外观已定，机械尺寸、公差、板厚、器件包络、PCB 对位、供应商 DFM 和实物适配仍未冻结。
+
+### Migration scope correction
+
+- A final literal-scope audit found two shared-family `volatile/` subtrees and four `VOLATILE_BASE_*` source originals still under Momo after the first copy.
+- Those Volatile-exclusive originals were moved to `C:\Users\LENOVO\Desktop\Volatile\history\shared-family-originals\`; Momo now retains only mixed-product family metadata/review atlases that also document MOMO and Root.
+- Volatile migration audit result after correction: PASS 13/13.
