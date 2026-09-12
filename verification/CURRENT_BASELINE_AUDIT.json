@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "checks": {
+    "svg_exists": true,
+    "svg_dimensions": true,
+    "svg_sha256": true,
+    "ai_pdf_compatible_header": true,
+    "ai_nonempty": true,
+    "png_nonempty": true,
+    "pdf_header": true
+  },
+  "files": {
+    "current/svg/MOMO_R166_REQ146_PANEL.svg": {
+      "bytes": 180840,
+      "sha256": "679f2137d3d8e626e4cc08ec8788a06e4362b5139e525aef3b2e3195598b673f"
+    },
+    "illustrator/MOMO_R166_REQ146_PANEL.ai": {
+      "bytes": 312909,
+      "sha256": "b3f9ace6fc96b0d3c8a8a1a4e10936e7cc592a10d02c7d98109a48d1a9f64f93"
+    },
+    "verification/MOMO_R166_REQ146_AI_EXPORT.png": {
+      "bytes": 116952,
+      "sha256": "f1165d922c94a119350265c5f8632ff2cee0fcdc43351c3abf2fc8c134a55589"
+    },
+    "verification/MOMO_R166_REQ146_AI_EXPORT.pdf": {
+      "bytes": 313221,
+      "sha256": "7e8f617dd7c448907729588b50db3579cb7e0d2bde47f26f59c2e4f146069adc"
+    }
+  },
+  "illustrator_live_readback": {
+    "version": "30.3.0",
+    "artboard_pt": [
+      201.600006103516,
+      364.251953125
+    ],
+    "layers": [
+      "OFFICIAL_BOTTOM_LOCKUP_RASTER",
+      "MOMO_PANEL_VISIBLE_VECTOR"
+    ],
+    "paths": 238,
+    "compound_paths": 8,
+    "groups": 47,
+    "text_frames": 22,
+    "raster_items": 1,
+    "placed_items": 0
+  }
+}
