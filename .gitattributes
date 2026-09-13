@@ -1,0 +1,4 @@
+# Preserve Illustrator/PDF bytes and the hash-audited SVG on Windows checkout.
+*.ai binary
+*.pdf binary
+current/svg/MOMO_R166_REQ146_PANEL.svg text eol=lf

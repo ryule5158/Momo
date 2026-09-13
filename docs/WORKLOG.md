@@ -2960,3 +2960,57 @@ Arbhar 只是用户见过的一个例子；类似导光工程很多。不能停�
 - A final literal-scope audit found two shared-family `volatile/` subtrees and four `VOLATILE_BASE_*` source originals still under Momo after the first copy.
 - Those Volatile-exclusive originals were moved to `C:\Users\LENOVO\Desktop\Volatile\history\shared-family-originals\`; Momo now retains only mixed-product family metadata/review atlases that also document MOMO and Root.
 - Volatile migration audit result after correction: PASS 13/13.
+
+## REQ-150 — Natural sleeping-cat line art, SVG approval stage (2026-09-12)
+
+- 用户否定 REQ-147/148 的卡通造型，要求更接近真实猫；随后明确采用便于制作实物、保留可爱和真实性、但不过度写实的画法。用户要求先审 SVG，通过后才能更新 AI。
+- 先用内置 image_gen 重画自然趴卧猫素描，再生成单色线描研究稿。密集毛发素描 REQ-149 已退出当前面板；当前 REQ-150 按新研究稿重新绘制原生贝塞尔路径，保留真实头身比例、头枕前爪、平缓背部、自然收后腿、额头黑斑及黑尾。
+- 当前独立猫文件 `current/svg/MOMO_NATURAL_CAT_LINEART.svg`；面板 `current/svg/MOMO_R166_REQ146_PANEL.svg` 中仅替换猫组为 `req150-natural-cat-lineart`。20 条路径、单色 #242424、猫组零位图，按约 18 mm 宽绘制，开放线条名义宽度 0.153 mm。该数值不是供应商 DFM 或打样通过证明，填充形状尖端和最小白缝未做制造认证。
+- `python tools/build_momo_natural_cat.py`、`node tools/render_current_momo.js` 完成；XML 可解析，猫组外文本逐字一致，局部和整板 PNG 已目检。审查记录及图稿位于 `verification/req150_natural_lineart/`。
+- AI 未修改，SHA-256 `b3f9ace6fc96b0d3c8a8a1a4e10936e7cc592a10d02c7d98109a48d1a9f64f93`。旧 `tools/audit_current.py` 与 DESIGN_BASELINE 仍指已批准的 AI/旧 SVG 基线，不适用于本轮待审候选。待用户认可 SVG 后再更新 AI、统一版本审计；本轮未提交或推送。
+
+## REQ-151 — 胖猫整体重画，继续 SVG 审阅
+
+- 用户指出 REQ-150 太细长，要求胖一点，并明确当前 logo 仍然很丑。该版未获认可；不能仅作比例拉伸并宣称完成审美改进。
+- 内置图像生成返回 usage_limit_reached，因此直接用原生贝塞尔重新绘制紧凑轮廓，缩短躯干及前肢，加厚腹部、肩背和后躯，把黑尾收回贴身；放大目检后进一步缩短鼻吻、修顺尾根，并去掉穿过面颊的前爪线。
+- 当前猫组 `req151-plump-cat-lineart`，独立稿 `current/svg/MOMO_PLUMP_CAT_LINEART.svg`，候选及局部/整板预览位于 `verification/req151_plump_cat/`。单色轮廓 18 条路径，名义开放线宽约 0.16–0.17 mm，保留实物打样和工艺核验边界。
+- `python tools/build_momo_plump_cat.py` 与 `node tools/render_current_momo.js` 已运行；SVG/XML 解析、猫组外逐字一致及 AI 哈希不变检查通过。已查看放大图和整板图，等待用户审美反馈；AI、发布基线及远端未更新。
+
+## REQ-152 / REQ-153 — 用户参考和画法否定
+
+- 用户提供两张猫素描参考，指出旧稿像狗；采用第一张头脸结构和第二张右下角趴姿重画 REQ152 后，用户仍否定整体风格，认为滑稽。REQ151/152 均未获得视觉认可。
+- REQ153 改为用户第二张参考右下角猫的简化矢量描摹画法研究。它是参考图衍生稿，不是原创角色，未更新 AI。记录与预览位于 `verification/req153_sketch_style_study/`。
+
+## REQ-154 — 沿素描方向精简并合板，等待 SVG 审阅
+
+- 用户对素描小样回复“可以继续”，授权沿该方向推进；这不等于批准更新 AI。保留参考衍生小样的头脸、趴卧姿态和体型，不再返回已否定的粗圆卡通线描。
+- `tools/build_momo_refined_sketch.py` 对图形碎片筛选、相邻线痕归并，并把多边形转为平滑二次曲线。原 1397 个轮廓减为 566 个（减少 59.5%），保留 #ababab / #737373 / #303030 三阶中性灰。该数字仅描述图形精简，不证明印刷可制造性。
+- 独立 SVG 为 `current/svg/MOMO_REFINED_SKETCH_CAT.svg`；面板仅将旧猫组替换为 `req154-refined-sketch-cat`，按约 17.5 mm 外框宽度布局。猫组没有嵌入位图；参考源并非原创设计的边界保留在 metadata/审查记录中。
+- 已运行 `python tools/build_momo_refined_sketch.py`、`node tools/render_current_momo.js`，实际查看局部、header 和整板 PNG；XML 可解析、猫组外逐字一致、AI 哈希不变。输出在 `verification/req154_refined_sketch/`。
+- 当前 SVG SHA-256 `5302adb558472ef91d5d978159d4d913d0d4df5ff661827ce4005572ea60410f`。三阶灰及细部实际再现仍需按工艺打样，未声称丝印/单次激光雕刻认证。AI 和已批准的发布基线未更新；本轮未提交或推送，等待当前 SVG 候选的视觉反馈。
+
+## REQ-155 — 品牌统一的简洁线条猫标识
+
+- 用户明确：模块 logo 应与品牌其他模块风格统一，只用优美可爱的线条描绘大概形状，并要求继续。因此当前方向由素描纹理转为稀疏细线标识；不把 REQ154 当作最终外观。
+- 只读查看 Volatile 当前 `current/svg/VOLATILE_PANEL_MONO.svg` 及渲染图，参考其右上角细线标识、留白与黑白灰用色，未修改 Volatile 文件。
+- 原生重画 7 条 SVG 路径，保留趴姿、耳朵、闭眼及后腿的少量轮廓。去掉毛发、灰阶填充和阴影，主线 0.125 mm，辅助线 0.09–0.115 mm；修去尾端交叉。线宽仅为源稿设计数值，尚无实物验证。
+- 当前独立猫稿 `current/svg/MOMO_FAMILY_CAT_MARK.svg`，面板猫组 `req155-family-cat-mark`。`python tools/build_momo_family_cat.py` 和 `node tools/render_current_momo.js` 已运行，局部、header、整板实际目检，猫组外逐字一致，AI 哈希仍为 `b3f9ace6fc96b0d3c8a8a1a4e10936e7cc592a10d02c7d98109a48d1a9f64f93`。
+- 输出目录 `verification/req155_family_cat/`，面板 SVG SHA-256 `e49eb7511883e4fb637e1b0f94691bea44420b88105ebae85d5bd916fa709a2b`。等待当前 SVG 审美认可后才落实 AI；本轮未更新 AI、发布基线或远端。
+
+## REQ-156 — 与 Volatile 原标识直接对照
+
+- 用户否定 REQ155：不是猫、尖尖的很丑，且与 Volatile 明显不是同一种风格。REQ155 未获认可。
+- 重新提取 Volatile 当前源 SVG 中 `volatile-module-logo` 原组，核对六条原曲线的灰度和线宽，直接用相同倍率渲染并排比较。其特点是多层错位的流动曲线与开口，不能仅匹配粗细或声称细线即风格相同。
+- `tools/build_momo_flow_cat.py` 重画 7 条曲线路径，圆滑低耳、短脸与趴伏轮廓，背部及下沿采用错位重复线。直接使用 Volatile 实际 0.105/0.11/0.12/0.14 mm 线宽及六种中性灰；这仅说明参数匹配，是否协调及猫识别度仍待用户审美确认。
+- 当前猫 SVG `current/svg/MOMO_FLOW_CAT_MARK.svg`，面板猫组 `req156-flow-cat-mark`。输出 `verification/req156_flow_cat/FAMILY_LOGO_COMPARISON.png` 左侧为未修改 Volatile 原标，右侧为 MOMO 候选；同时有 header、局部和整板预览。
+- 已运行生成与渲染脚本并实际查看比较图与 header；XML 可解析，猫组外全文不变。Volatile SHA-256 `339b36b991138df27cb8e2e32d3ee268dd69a607fd76939fca21f1195689753c` 及 MOMO AI 哈希均未变；面板 SVG SHA-256 `07b3bf7c78cf747d92a5abd4c69eb63d84c643f1cf9b7a4441fc21da7290afcb`。
+- 本轮仍只提供 SVG 候选，不更新 AI、发布基线或远端，无制造/实物验证声明。
+
+## REQ-156 — 用户批准后落实 AI 与远端交付（2026-09-13）
+
+- 用户明确“可以，落实修改ai，推送远端”，随后要求继续收尾。采用已通过的流动线条猫稿，保持 R166 版式和底部官方标识。
+- 最初的跨文档复制/深层快照脚本未及时返回。核对仅有本任务两个已保存文档、磁盘 AI 完整后，重启无响应的 Illustrator；改为直接按 SVG 三次贝塞尔控制点建立原生路径。未重复运行失败脚本，未改动其他文档。
+- `tools/prepare_momo_logo_native_ai.py` 生成路径数据和 `tools/add_momo_logo_native_ai.jsx`。在原 AI 新建 `MOMO_MODULE_LOGO_FLOW_VECTOR`，加入 `req156-flow-cat-mark`，再单独移除 `req146-cat-profile`。7 条 SVG 路径含 8 个子路径，对应 AI 的 8 条路径和 1 个复合路径。
+- 已保存 AI，导出 500% PNG/PDF，关闭并重新打开回读：218 paths、5 compound paths、47 groups、22 editable text frames、1 embedded raster、0 placed items，旧猫分组为 0。AI SHA-256 `04e6ca090a848efdd71a9cadf232479fdd99000499f81c995dbb0c2dd39448aa`；权威 SVG SHA-256 `fd4cf737c08229c734d99ee20ac1dc574023b848899b6895b6fae7874658527d`。
+- `python tools/audit_current.py`：PASS 16/16。AI 路径控制点和线宽最大误差约 1.34e-8 pt，灰度一致。1010×1820 像素导出前后比较共变化 7295 像素，猫标矩形之外变化 0 像素。回读与图片比较为文件验证，不代表制造或实物验证。
+- `python tools/make_momo_ai_import.py` 已刷新可见矢量辅助文件。最终 SVG、AI、导出预览、比较图、审计及本轮脚本纳入 MOMO `master` 交付；远端目标 `https://github.com/ryule5158/Momo`。被否定的图稿、失败 JSX 和其他任务未提交文件保留在本地。

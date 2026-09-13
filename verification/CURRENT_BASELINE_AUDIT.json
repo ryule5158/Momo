@@ -7,41 +7,72 @@
     "ai_pdf_compatible_header": true,
     "ai_nonempty": true,
     "png_nonempty": true,
-    "pdf_header": true
+    "pdf_header": true,
+    "ai_live_readback_matches_file": true,
+    "approved_logo_in_svg": true,
+    "native_logo_geometry_and_width": true,
+    "native_logo_colors": true,
+    "new_logo_path_count": true,
+    "old_logo_removed": true,
+    "non_logo_export_pixels_identical": true,
+    "logo_actually_changed": true,
+    "original_text_and_brand_retained": true
   },
   "files": {
     "current/svg/MOMO_R166_REQ146_PANEL.svg": {
-      "bytes": 180840,
-      "sha256": "679f2137d3d8e626e4cc08ec8788a06e4362b5139e525aef3b2e3195598b673f"
+      "bytes": 177971,
+      "sha256": "fd4cf737c08229c734d99ee20ac1dc574023b848899b6895b6fae7874658527d"
     },
     "illustrator/MOMO_R166_REQ146_PANEL.ai": {
-      "bytes": 312909,
-      "sha256": "b3f9ace6fc96b0d3c8a8a1a4e10936e7cc592a10d02c7d98109a48d1a9f64f93"
+      "bytes": 328951,
+      "sha256": "04e6ca090a848efdd71a9cadf232479fdd99000499f81c995dbb0c2dd39448aa"
     },
     "verification/MOMO_R166_REQ146_AI_EXPORT.png": {
-      "bytes": 116952,
-      "sha256": "f1165d922c94a119350265c5f8632ff2cee0fcdc43351c3abf2fc8c134a55589"
+      "bytes": 212528,
+      "sha256": "5d2280258c86139199663b51386b29bbb161204e3dfc16bdcc5eafb615bf5c6e"
     },
     "verification/MOMO_R166_REQ146_AI_EXPORT.pdf": {
-      "bytes": 313221,
-      "sha256": "7e8f617dd7c448907729588b50db3579cb7e0d2bde47f26f59c2e4f146069adc"
+      "bytes": 328437,
+      "sha256": "0c3564f795e19e6e350c420a016e11547f9ba95f9cd37ed41d82d0c2218629c8"
     }
   },
   "illustrator_live_readback": {
     "version": "30.3.0",
+    "name": "MOMO_R166_REQ146_PANEL.ai",
+    "saved": true,
     "artboard_pt": [
+      0,
+      364.251953125,
       201.600006103516,
-      364.251953125
+      0
     ],
     "layers": [
+      "MOMO_MODULE_LOGO_FLOW_VECTOR",
       "OFFICIAL_BOTTOM_LOCKUP_RASTER",
       "MOMO_PANEL_VISIBLE_VECTOR"
     ],
-    "paths": 238,
-    "compound_paths": 8,
+    "paths": 218,
+    "compound_paths": 5,
     "groups": 47,
     "text_frames": 22,
     "raster_items": 1,
-    "placed_items": 0
+    "placed_items": 0,
+    "old_logo_groups": 0,
+    "ai_sha256": "04e6ca090a848efdd71a9cadf232479fdd99000499f81c995dbb0c2dd39448aa"
+  },
+  "logo_max_coordinate_or_width_error_pt": 1.3422782496608221e-08,
+  "ai_export_comparison": {
+    "dimensions_px": [
+      1010,
+      1820
+    ],
+    "changed_pixels": 7295,
+    "changed_pixels_outside_logo": 0,
+    "excluded_logo_rectangle_px": [
+      710,
+      14,
+      924,
+      135
+    ]
   }
 }

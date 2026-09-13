@@ -1,0 +1,36 @@
+{
+  "status": "SVG_USER_APPROVED_2026-09-12",
+  "path_count": 7,
+  "family_reference": "Volatile current original emblem",
+  "exact_family_strokes": [
+    [
+      "#646464",
+      0.14
+    ],
+    [
+      "#929292",
+      0.11
+    ],
+    [
+      "#9B9B9B",
+      0.105
+    ],
+    [
+      "#757575",
+      0.12
+    ],
+    [
+      "#A0A0A0",
+      0.105
+    ],
+    [
+      "#969696",
+      0.105
+    ]
+  ],
+  "outside_cat_unchanged": true,
+  "ai_sha256_at_svg_generation": "b3f9ace6fc96b0d3c8a8a1a4e10936e7cc592a10d02c7d98109a48d1a9f64f93",
+  "volatile_unchanged_sha256": "339b36b991138df27cb8e2e32d3ee268dd69a607fd76939fca21f1195689753c",
+  "panel_sha256": "fd4cf737c08229c734d99ee20ac1dc574023b848899b6895b6fae7874658527d",
+  "boundary": "Visual approval granted by user. Physical manufacturing validation remains pending; AI readback is audited separately."
+}
